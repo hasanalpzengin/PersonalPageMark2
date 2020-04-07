@@ -1,0 +1,12 @@
+type Project{
+    name: String
+    createdAt: String
+    updatedAt: String
+    url: String
+    description: String
+    lang: String
+}
+
+extend type Query{
+    projects: [Project]
+}

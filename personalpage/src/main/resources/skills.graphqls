@@ -1,0 +1,16 @@
+type Skill{
+    _id: ID!,
+    category: String,
+    name: String!,
+    level: Int!
+}
+
+type Query{
+    skills(category: String): [Skill],
+    categories: [Skill]
+}
+
+type Mutation{
+    createSkill(category: String, name: String, level: Int): Skill
+    deleteSkill(id: ID!): Boolean
+}

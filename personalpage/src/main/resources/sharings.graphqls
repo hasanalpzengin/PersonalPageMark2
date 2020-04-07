@@ -1,0 +1,15 @@
+type Sharing{
+    _id: ID!,
+    image: String,
+    description: String,
+    createdAt: String
+}
+
+extend type Query{
+    sharings: [Sharing]
+}
+
+extend type Mutation{
+    createSharing(image: String!, description: String): Sharing
+    deleteSharing(id: ID): Boolean
+}
